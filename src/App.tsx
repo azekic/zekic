@@ -1,4 +1,4 @@
-import profilePicture from "./assets/react.svg";
+import profilePicture from "./assets/profile-picture.jpg";
 import "./App.css";
 
 function App() {
