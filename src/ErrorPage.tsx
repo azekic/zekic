@@ -11,7 +11,9 @@ export default function ErrorPage() {
       : "An unexpected error has occurred";
   return (
     <PageWrapper>
-      <Heading>{errorMessage}</Heading>
+      <Heading m="2" textAlign="center">
+        {errorMessage}
+      </Heading>
     </PageWrapper>
   );
 }
