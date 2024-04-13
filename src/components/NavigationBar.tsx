@@ -7,12 +7,7 @@ export function NavigationBar() {
   return (
     <Flex p={2} width="100vw" position="absolute">
       <Spacer />
-      <Button
-        as={Link}
-        to={isRoot ? "about" : "/"}
-        variant="ghost"
-        color="gray.600"
-      >
+      <Button as={Link} to={isRoot ? "about" : "/"} variant="ghost">
         {isRoot ? "About" : "Home"}
       </Button>
     </Flex>
