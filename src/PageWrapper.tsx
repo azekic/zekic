@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react";
+import { NavigationBar } from "./components";
 
 type Props = {
   children: React.ReactNode;
@@ -6,14 +7,17 @@ type Props = {
 
 export function PageWrapper({ children }: Props) {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-      height="100vh"
-    >
-      {children}
-    </Box>
+    <>
+      <NavigationBar />
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        height="100vh"
+      >
+        {children}
+      </Box>
+    </>
   );
 }

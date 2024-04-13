@@ -1,18 +1,9 @@
 import { PageWrapper } from "../PageWrapper";
-import { Text, Box } from "@chakra-ui/react";
-import { HomeButton } from "../components";
+import { Heading } from "@chakra-ui/react";
 export function About() {
   return (
     <PageWrapper>
-      <Box
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        gap={4}
-      >
-        <Text>Andre is a software developer from Canada.</Text>
-        <HomeButton />
-      </Box>
+      <Heading>Andre is a software developer from Canada.</Heading>
     </PageWrapper>
   );
 }
