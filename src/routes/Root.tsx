@@ -1,22 +1,25 @@
-import { Link } from "react-router-dom";
-
 import { PageWrapper } from "../PageWrapper";
 import profilePicture from "../assets/profile-picture.jpg";
-import { Image, Heading, Text, Button } from "@chakra-ui/react";
+import { Image, Heading, VStack, HStack } from "@chakra-ui/react";
+import { NavigationBar } from "../components";
 export function Root() {
   return (
-    <PageWrapper>
-      <Image
-        borderRadius="full"
-        boxSize="40"
-        alt="Andre Zekic"
-        src={profilePicture}
-      />
-      <Heading>Andre Zekic</Heading>
-      <Text>Software Developer</Text>
-      <Button as={Link} to="about" variant="ghost" my={2} color="gray.600">
-        About Me
-      </Button>
-    </PageWrapper>
+    <>
+      <NavigationBar />
+      <PageWrapper>
+        <HStack gap={6} wrap={"wrap"} justifyContent="center">
+          <Image
+            borderRadius="full"
+            boxSize="40"
+            alt="Andre Zekic"
+            src={profilePicture}
+          />
+          <VStack alignItems="flex-start" gap="0">
+            <Heading size="4xl">Andre Zekic</Heading>
+            <Heading size="lg">Software Developer</Heading>
+          </VStack>
+        </HStack>
+      </PageWrapper>
+    </>
   );
 }
