@@ -6,11 +6,13 @@ export function NavigationBar() {
 
   return (
     <Flex p={2} width="100vw" position="absolute" alignItems="center">
-      <Heading size="md" px={3}>
-        <Link as={ReactRouterLink} to={"/"}>
-          Andre Zekic
-        </Link>
-      </Heading>
+      {!isRoot && (
+        <Heading size="md" px={3}>
+          <Link as={ReactRouterLink} to={"/"}>
+            Andre Zekic
+          </Link>
+        </Heading>
+      )}
       <Spacer />
       <Button as={ReactRouterLink} to={isRoot ? "about" : "/"} variant="ghost">
         {isRoot ? "About" : "Home"}
