@@ -10,6 +10,9 @@ export function NavigationBar() {
       <Button as={Link} to={isRoot ? "about" : "/"} variant="ghost">
         {isRoot ? "About" : "Home"}
       </Button>
+      <Button as={Link} to="mailto:andre@zekic.ca" variant="ghost">
+        Contact
+      </Button>
     </Flex>
   );
 }
