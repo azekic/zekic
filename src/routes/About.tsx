@@ -12,7 +12,7 @@ export function About() {
 
   return (
     <PageWrapper>
-      <Stack m="6" maxWidth="42rem" gap={4}>
+      <Stack m="6" maxWidth="42rem" gap={4} pt={8}>
         <Heading size="lg">{introduction}</Heading>
         <Heading size="lg">{biography}</Heading>
         <Heading size="lg">
