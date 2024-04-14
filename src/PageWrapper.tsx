@@ -6,13 +6,15 @@ type Props = {
 };
 
 export function PageWrapper({ children }: Props) {
+  const isAboutPage = window.location.pathname === "/about";
+
   return (
     <>
       <NavigationBar />
       <Box
         display="flex"
         flexDirection="column"
-        justifyContent="center"
+        justifyContent={isAboutPage ? "flex-start" : "center"}
         alignItems="center"
         height="100vh"
       >
