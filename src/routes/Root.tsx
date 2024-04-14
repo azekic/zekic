@@ -8,7 +8,7 @@ import {
   useColorMode,
   Link,
 } from "@chakra-ui/react";
-import { AnimatedHeader } from "../components";
+import { AnimatedAttributes } from "../components";
 
 export function Root() {
   const { toggleColorMode } = useColorMode();
@@ -28,7 +28,7 @@ export function Root() {
           <Heading size="4xl">
             Andre Zeki<Link onClick={toggleColorMode}>c</Link>
           </Heading>
-          <AnimatedHeader />
+          <AnimatedAttributes />
         </VStack>
       </HStack>
     </PageWrapper>
