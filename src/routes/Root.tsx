@@ -1,7 +1,17 @@
 import { PageWrapper } from "../PageWrapper";
 import profilePicture from "../assets/profile-picture.jpg";
-import { Image, Heading, VStack, HStack } from "@chakra-ui/react";
+import {
+  Image,
+  Heading,
+  VStack,
+  HStack,
+  useColorMode,
+  Link,
+} from "@chakra-ui/react";
+
 export function Root() {
+  const { toggleColorMode } = useColorMode();
+
   return (
     <PageWrapper>
       <HStack gap={6} wrap="wrap" justifyContent="center">
@@ -14,7 +24,9 @@ export function Root() {
           />
         </a>
         <VStack alignItems="flex-start" gap="0">
-          <Heading size="4xl">Andre Zekic</Heading>
+          <Heading size="4xl">
+            Andre Zeki<Link onClick={toggleColorMode}>c</Link>
+          </Heading>
           <Heading size="lg">Software Developer</Heading>
         </VStack>
       </HStack>
