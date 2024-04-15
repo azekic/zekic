@@ -6,6 +6,7 @@ import { Root, About } from "./routes";
 import ErrorPage from "./ErrorPage";
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 import { ParticleProvider } from "./ParticleProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const config: ThemeConfig = {
   useSystemColorMode: true,
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ChakraProvider theme={theme}>
       <RouterProvider router={router} />
       <ParticleProvider />
+      <Analytics />
     </ChakraProvider>
   </React.StrictMode>
 );
